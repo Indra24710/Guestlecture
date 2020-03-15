@@ -15,33 +15,36 @@ public class UnitTesting {
         output=t.checkEmailForValidity(input2);
         assertEquals(false,output);
         String input3="@email.com";
-        output=t.checkEmailForValidity(input2);
+        output=t.checkEmailForValidity(input3);
         assertEquals(false,output);
         String input4="name@email..com";
-        output=t.checkEmailForValidity(input2);
+        output=t.checkEmailForValidity(input4);
         assertEquals(false,output);
-        String input5="name1234@email.com";
-        output=t.checkEmailForValidity(input2);
-        assertEquals(false,output);
+        String input5="Name1234@email.com";
+        output=t.checkEmailForValidity(input5);
+        assertEquals(true,output);
     }
     @Test
     public void passwordCheck(){
         Unittest t=new Unittest();
-        String input1="abcdefgh";
+        String input1="Abcdefgh123*&";
         boolean output;
         output=t.checkPasswordValidity(input1);
         assertEquals(true,output);
-        String input2="abcd12345";
+        String input2="Abcd()12345&*";
         output=t.checkPasswordValidity(input2);
         assertEquals(true,output);
         String input3="abcd";
-        output=t.checkPasswordValidity(input2);
+        output=t.checkPasswordValidity(input3);
         assertEquals(false,output);
         String input4="123456789";
-        output=t.checkPasswordValidity(input2);
+        output=t.checkPasswordValidity(input4);
         assertEquals(false,output);
         String input5="abcd1234567";
-        output=t.checkPasswordValidity(input2);
-        assertEquals(true,output);
+        output=t.checkPasswordValidity(input5);
+        assertEquals(false,output);
+        String input6="abcd 1234567";
+        output=t.checkPasswordValidity(input6);
+        assertEquals(false,output);
     }
 }
