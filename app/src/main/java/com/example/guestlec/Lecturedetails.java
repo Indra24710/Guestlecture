@@ -43,6 +43,7 @@ public class Lecturedetails extends AppCompatActivity {
   TextView professor,lecture,date,time,venue;
   ImageButton book_lecture,locate_venue;
     RecyclerView recyclerView;
+    TextView s;
   private DatabaseReference dref,dref2;
   DataSnapshot dataSnapshot7;
   String lecture_id;
