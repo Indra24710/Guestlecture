@@ -3,12 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/lecture_details"
+    <Button
+        android:id="@+id/signout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:text="hallelujah"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:background="@android:color/transparent"
+        android:padding="7dp"
+        android:text="Sign Out From Your Account"
+        android:textAlignment="textStart"
+        android:textAllCaps="false" />
 </LinearLayout>

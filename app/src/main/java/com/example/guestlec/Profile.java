@@ -85,8 +85,17 @@ public class Profile extends Fragment {
         }else{
 
             SharedPreferences pref=getContext().getSharedPreferences("emailprefs",MODE_PRIVATE);
+
             String email_id=pref.getString("email","");
+            String image_url=pref.getString("imageurl","");
             email.setText(email_id);
+
+            Glide
+                    .with(getContext()).load(image_url)
+                    .override(450, 400)
+                    .centerCrop()
+                    .into(photo);
+            name.setText(" ");
 
 
 

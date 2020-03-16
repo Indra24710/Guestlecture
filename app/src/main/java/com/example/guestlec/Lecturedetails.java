@@ -162,7 +162,6 @@ public class Lecturedetails extends AppCompatActivity {
         });
 
 
-
          // set the Adapter to RecyclerView
 
         book_lecture=findViewById(R.id.book);
